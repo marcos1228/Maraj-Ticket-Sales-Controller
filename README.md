@@ -43,3 +43,26 @@ Para executar o Marajó Ticket Sales Controller localmente, siga as instruções
 
 Contribuição
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+            +--------------------+
+            |    Client Apps     |
+            +---------+----------+
+                      |
+                      v
+            +---------+----------+
+            |     API Gateway    |
+            +---------+----------+
+                      |
+        +-------------+------------+
+        |             |            |
+        v             v            v
++-------+-------+ +---+---+ +------+------+
+| Booking       | | User  | | Schedule    |
+| Service       | | Service| | Service    |
++---+-----------+ +---+---+ +------+------+
+    |                   |           |
+    v                   v           v
++---+---+        +------+     +----+----+
+| Boat  |        |Payment|     |  Eureka  |
+|Service|        |Service|     |  Server  |
++-------+        +-------+     +----------+
